@@ -22,8 +22,8 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::490193484081:role/CodeDeployRoleforGitHub
-          role-session-name: GitHub-Action-Role
+          role-to-assume: arn:aws:iam::490193484081:role/gh-actions-role
+
           aws-region: us-east-1
 
       - name: Set up JDK 1.8
@@ -54,8 +54,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
-        role-session-name: GitHub-Action-Role
+        role-to-assume: arn:aws:iam::490193484081:role/gh-actions-role
+
         aws-region: ${{ env.AWS_REGION }}
     - run: |
         echo "Deploying branch ${{ env.GITHUB_REF }} to ${{ github.event.inputs.environment }}"
