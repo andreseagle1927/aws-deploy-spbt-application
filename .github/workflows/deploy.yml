@@ -6,6 +6,7 @@ on:
 env:
   applicationfolder: spring-boot-hello-world-example
   AWS_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: AKIAXEIOO7EYUS5UE67P
   S3BUCKET: codedeploystack-webappdeploymentbucket-17xom48bdaos2
 
 
